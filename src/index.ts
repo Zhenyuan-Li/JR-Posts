@@ -18,6 +18,10 @@ app.use(express.json());
 
 app.use('/posts', postRoutes);
 
+app.get('/', (req, res) => {
+  res.status(200).send('<h1>Hello World</h1>');
+});
+
 app.listen(port, () => {
   console.log(`Server is listening on ${port}`);
 });
